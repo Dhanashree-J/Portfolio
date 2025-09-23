@@ -155,18 +155,29 @@
     }
     
     .project-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
       gap: 1.5rem;
     }
 
+    #projects, #skills, #contact,#about,#experience {
+  padding-top: 80px;
+  margin-top: -80px;
+}
+
+
     .project-card,.social{
       background: #1a1a1a;
-      padding: 1.5rem;
+      padding: 1rem;
       border-radius: 12px;
       box-shadow: 0 0 10px rgba(0,255,204,0.2);
       transition: transform 0.3s;
     }
+
+    .project-card{
+      width:100%;
+    }
+
 
     .project-card p,.project-card a{
         font-size:20px;
@@ -182,7 +193,12 @@
       color: #ff0066;
     }
 
-
+    .project-card img {
+    width: 200px;               
+    height: 150px;
+    border-radius: 8px;
+    float:left;
+}
   .social-links {
     margin-top: 15px;
     display:flex;
